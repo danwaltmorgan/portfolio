@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  width: 100%;
+}
+
+li:hover {
+  background: indianred;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  /* position: absolute; */
+}
+
+.link {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: darkgrey;
+}
+.link:hover {
+  background: indianred;
+  z-index: 99;
+}
