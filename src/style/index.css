@@ -1,4 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+  font-family: monospace;
 }

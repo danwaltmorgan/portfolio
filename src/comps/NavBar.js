@@ -10,26 +10,36 @@ export default function NavBar() {
     <div className="nav-container">
       <ul className="list-container">
         <li>
-          <Link to="/"
-          className="link">
+          <a
+            href="#home"
+            className="link"
+            >
             Home
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="/about"
-          className="link">
-            About
-          </Link>
+          <a
+            href="#"
+            className="link"
+            >
+              About
+          </a>
         </li>
         <li>
-          <Link to="/projects"
-          className="link"
-          >Projects</Link>
+          <a
+            href="#projects"
+            className="link"
+            >
+              Projects
+            </a>
         </li>
         <li>
-          <Link to="/contact"
-          className="link"
-          >Contact</Link>
+          <a
+            href="#"
+            className="link"
+            >
+              Contact
+          </a>
         </li>
       </ul>
     </div>
