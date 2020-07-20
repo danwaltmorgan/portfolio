@@ -1,13 +1,31 @@
-import React from 'react'
-import {
-  Link
-} from "react-router-dom"
+import React, { useEffect } from 'react'
+
 
 import '../style/navbar.css'
 
 export default function NavBar() {
+
+  useEffect(() => {
+    window.onscroll = () => {stickyNav()}
+
+    const navbar = document.getElementById("navbar")
+    const sticky = navbar.offsetTop
+
+    function stickyNav() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky")
+      }
+    }
+  })
+
+
   return (
-    <div className="nav-container">
+    <div
+      className="nav-container"
+      id="navbar"
+      >
       <ul className="list-container">
         <li>
           <a

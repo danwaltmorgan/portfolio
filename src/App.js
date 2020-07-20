@@ -11,8 +11,8 @@ import './style/index.css'
 export default function App() {
   return (
     <div className="">
-      <NavBar />
       <Home />
+      <NavBar />
       <Projects />
     </div>
   )

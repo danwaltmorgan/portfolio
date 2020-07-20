@@ -15,16 +15,12 @@ li:hover {
 }
 
 .list-container {
-  /* width: 10vw; */
-  /* float: left; */
-  /* position: absolute; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0;
   padding: 0;
-  /* position: absolute; */
 }
 
 .link {
@@ -35,8 +31,22 @@ li:hover {
   align-items: center;
   color: white;
   background: #606A75;
+  transition: background .5s;
 }
 .link:hover {
   background: indianred;
   z-index: 99;
+  /* height: 10vh; */
+  /* transform: scaleY(1.5); */
+  transform-origin: top center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .container {
+  padding-top: 7vh;
 }

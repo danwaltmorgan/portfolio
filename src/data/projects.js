@@ -6,7 +6,7 @@ export default [
     id: "sign-site",
     url: "mal-sign-site.netlify.app",
     img: null,
-    tech: "React"
+    tech: "JS"
   },
   {
     title: "Maybe List",

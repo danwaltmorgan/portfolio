@@ -6,11 +6,14 @@ export default function ProjectWindow(props) {
 
   function handleMouseOver(e) {
     const banners = document.querySelectorAll(`.${props.id}-banner`)
-    const img = document.querySelectorAll
+    const title = document.querySelector(`.project-title`)
+    // const img = document.querySelectorAll
     banners.forEach(banner => {
       banner.classList.add("banner-active")
     })
-
+    // title.forEach(tit => {
+    //   tit.style.display = "block"
+    // })
   }
 
   function handleMouseOut() {
@@ -29,11 +32,12 @@ export default function ProjectWindow(props) {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       >
-      <div className={props.id + "-banner banner"}></div>
-      <div className="img-div">
-        <h2 className="test"
+      <div className={props.id + "-banner banner"}>
+        <h2 className={props.id + "project-title project-title"}
           >{props.title}
         </h2>
+      </div>
+      <div className="img-div">
 
       </div>
       <div className={props.id + "-banner banner"}></div>

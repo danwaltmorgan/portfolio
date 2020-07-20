@@ -1,11 +1,12 @@
 .project-container {
-  width: 20vw;
+  width: 30vw;
   height: 30vh;
   background: #a0a0a0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 5px;
+  transition: all .5s;
 }
 
 .img-div {
@@ -27,6 +28,7 @@
   height: 30%;
 }
 
-.test {
-  
+.project-title {
+  color: white;
+  display: none;
 }

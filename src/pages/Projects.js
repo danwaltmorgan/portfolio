@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectWindow from "../comps/ProjectWindow"
 import projectsData from "../data/projects.js"
 
 
 export default function Projects() {
 
-  let projects = projectsData.map(project => {
+  const [data, setData] = useState(projectsData)
+
+  function handleSort(sorter) {
+
+    data.forEach(dat => {
+      if (!dat.tech.includes(sorter)) {
+        let win = document.getElementById(dat.id)
+        win.style.height = "0px"
+        win.style.width = "0px"
+      }
+    })
+
+  }
+
+  let projects = data.map(project => {
     return (
       <div>
         <ProjectWindow
@@ -22,6 +36,7 @@ export default function Projects() {
       className="container"
       id="projects"
       >
+        
       {projects}
     </div>
   )
