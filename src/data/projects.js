@@ -21,5 +21,6 @@ export default [
     url: "dan-pomodoro-timer.netlify.app",
     img: null,
     tech: "React, Redux"
-  }
+  },
+  
 ]

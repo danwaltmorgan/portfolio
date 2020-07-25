@@ -37,7 +37,7 @@ export default function NavBar() {
         </li>
         <li>
           <a
-            href="#"
+            href="#about"
             className="link"
             >
               About

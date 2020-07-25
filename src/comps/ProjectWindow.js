@@ -1,46 +1,33 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "../style/projWindow.css"
+import PosButton from '../comps/PosButton'
 
 export default function ProjectWindow(props) {
-
-
-  function handleMouseOver(e) {
-    const banners = document.querySelectorAll(`.${props.id}-banner`)
-    const title = document.querySelector(`.project-title`)
-    // const img = document.querySelectorAll
-    banners.forEach(banner => {
-      banner.classList.add("banner-active")
-    })
-    // title.forEach(tit => {
-    //   tit.style.display = "block"
-    // })
-  }
-
-  function handleMouseOut() {
-    const banners = document.querySelectorAll(".banner")
-
-    banners.forEach(banner => {
-      banner.classList.remove("banner-active")
-    })
-  }
 
 
   return (
     <div
       className="project-container"
       id={props.id}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
       >
-      <div className={props.id + "-banner banner"}>
-        <h2 className={props.id + "project-title project-title"}
+      <div className="banner top-banner">
+      </div>
+      <div className="top-banner-content banner-content">
+        <h2 className="project-title"
           >{props.title}
         </h2>
       </div>
       <div className="img-div">
+        <p style={{fontSize: "3em"}}>Test</p>
+      </div>
+      <div className="banner bottom-banner"></div>
+      <div className="bottom-banner-content banner-content">
+
+        <PosButton text="GitHub"/>
+        <PosButton text="WebSite"/>
+
 
       </div>
-      <div className={props.id + "-banner banner"}></div>
     </div>
   )
 }

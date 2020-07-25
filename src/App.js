@@ -13,6 +13,7 @@ export default function App() {
     <div className="">
       <Home />
       <NavBar />
+      {/* <About /> */}
       <Projects />
     </div>
   )

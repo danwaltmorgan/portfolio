@@ -1,32 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import '../style/home.css'
+import PosButton from '../comps/PosButton'
+
 
 export default function Home() {
-
-  // const [button, setButton] = useState(true)
-  //
-  // useEffect(() => {
-  //   const slider = document.getElementById("slider")
-  //   slider.style.top = "-50px"
-  //
-  //   if (button) {
-  //     handleHover()
-  //   }
-  //   if (!button) {
-  //     handleLeave()
-  //   }
-  // })
-
-
-  function handleHover() {
-    const slider = document.getElementById("slider")
-      slider.style.top = "0px"
-  }
-
-  function handleLeave() {
-    const slider = document.getElementById("slider")
-    slider.style.top = "-50px"
-  }
 
   return (
     <div
@@ -39,17 +16,11 @@ export default function Home() {
            Front-End <br/> Developer
         </h1>
         <div>
-          <a href="#projects"
-            className="btn"
-            id="btn"
-            onMouseOver={handleHover}
-            onMouseOut={handleLeave}
-            >
-                <p className="btn-text">
-                  Learn More
-                </p>
-                <div id="slider"></div>
-          </a>
+
+          <PosButton
+            text="Learn More"
+            secondaryText="About Me"
+          />
         </div>
       </div>
     </div>

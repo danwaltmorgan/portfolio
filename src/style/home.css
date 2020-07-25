@@ -1,17 +1,5 @@
-.container {
-  width: 100%;
-  height: 100vh;
-  background: #384552;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  scroll-behavior: smooth;
-}
-
 .text {
-  font-size: 3em;
+  font-size: 4em;
   font-family: 'Major Mono Display', monospace;
   color: white;
   text-align: center;
@@ -40,6 +28,7 @@
 
 .btn-text {
   z-index: 99;
+  transition: all .5s;
 }
 
 #slider {
@@ -50,11 +39,17 @@
   top: -50px;
   left: 0px;
   transition: all .5s;
-  z-index: 1;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #384552
 }
+
+
 
 .btn:hover {
   border: indianred solid 2px;
   /* background: indianred; */
-  color: #384552;
+  /* color: #384552; */
 }

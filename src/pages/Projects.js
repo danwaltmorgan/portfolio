@@ -8,7 +8,6 @@ export default function Projects() {
   const [data, setData] = useState(projectsData)
 
   function handleSort(sorter) {
-
     data.forEach(dat => {
       if (!dat.tech.includes(sorter)) {
         let win = document.getElementById(dat.id)
@@ -16,7 +15,6 @@ export default function Projects() {
         win.style.width = "0px"
       }
     })
-
   }
 
   let projects = data.map(project => {
@@ -36,7 +34,7 @@ export default function Projects() {
       className="container"
       id="projects"
       >
-        
+
       {projects}
     </div>
   )
