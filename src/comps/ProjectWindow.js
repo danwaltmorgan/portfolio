@@ -26,11 +26,12 @@ export default function ProjectWindow(props) {
         <PosButton text="WebSite"/>
       </div> */}
 
+      <div className="banner bottom-banner"></div>
       <div className="banner right-banner"></div>
       <div className="right-banner-content banner-content">
         <PosButton text="GitHub"/>
       </div>
-      
+
       <div className="banner left-banner"></div>
       <div className="left-banner-content banner-content">
         <PosButton text="WebSite"/>

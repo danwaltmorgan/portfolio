@@ -34,7 +34,6 @@ export default function Projects() {
       className="container"
       id="projects"
       >
-
       {projects}
     </div>
   )
