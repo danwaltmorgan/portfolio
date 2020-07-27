@@ -20,14 +20,25 @@ export default function ProjectWindow(props) {
       <div className="img-div">
         <img src="https://lh3.googleusercontent.com/ndlK4-IZ-QwMnZzmluc8ca_B6XMSjDxZKHkxZgxqCPwOomky2YgJk-KTby5IOCZ-bZw7oDLq30gtufS215k--NLeSLPJb9oEN_j6rBDD4cu46wEZ949uRpuZH77l7zlqQOg4QDeyLQ=s200-p-k"></img>
       </div>
-      <div className="banner bottom-banner"></div>
-      <div className="bottom-banner-content banner-content">
-
+      {/* <div className="banner bottom-banner"></div> */}
+      {/* <div className="bottom-banner-content banner-content">
         <PosButton text="GitHub"/>
         <PosButton text="WebSite"/>
+      </div> */}
 
-
+      <div className="banner bottom-banner"></div>
+      <div className="banner right-banner"></div>
+      <div className="right-banner-content banner-content">
+        <PosButton text="GitHub"/>
       </div>
+
+      <div className="banner left-banner"></div>
+      <div className="left-banner-content banner-content">
+        <PosButton text="WebSite"/>
+      </div>
+
+
+
     </div>
   )
 }

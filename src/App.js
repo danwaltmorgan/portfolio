@@ -15,6 +15,10 @@ export default function App() {
       <NavBar />
       {/* <About /> */}
       <Projects />
+      <Projects />
+      
+      <About />
+
     </div>
   )
 }
