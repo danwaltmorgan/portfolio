@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  transition: all .5s;
+  transition: all 1s;
   left: 0;
   opacity: 50%;
   background: black;
@@ -32,11 +32,22 @@
 
 .top-banner {
   top: -100%;
+  /* background: yellow; */
 }
 
 .bottom-banner {
   bottom: -100%;
 }
+.right-banner {
+  left: 100%;
+  /* background-color: blue; */
+}
+
+.left-banner {
+  left: -100%;
+  /* background: red; */
+}
+
 
 .banner-content {
   width: 100%;
@@ -56,6 +67,22 @@
 .bottom-banner-content {
   bottom: -50%;
   justify-content: space-around;
+}
+
+.left-banner-content {
+  left: -50%;
+  bottom: 20%;
+  height: 100%;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.right-banner-content {
+  right: -50%;
+  bottom: 20%;
+  height: 100%;
+  width: 50%;
+  align-items: flex-end;
 }
 
 .project-title {
@@ -83,8 +110,18 @@
   bottom: 0%;
 }
 
-iframe {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+.project-container:hover > .left-banner-content {
+  left: 0%;
+}
+
+.project-container:hover > .right-banner-content {
+  right: 0%;
+}
+
+.project-container:hover > .left-banner {
+  left: 0%;
+}
+
+.project-container:hover > .right-banner {
+  left: 0%;
 }
