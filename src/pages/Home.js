@@ -20,6 +20,7 @@ export default function Home() {
           <PosButton
             text="Learn More"
             secondaryText="About Me"
+            position="top"
           />
         </div>
       </div>
