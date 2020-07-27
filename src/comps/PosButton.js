@@ -1,29 +1,41 @@
 import React, { useRef, useState, useEffect } from 'react'
+import '../style/posButton.css'
 
 export default function PosButton(props) {
 
-  const slider = useRef(null)
 
   const [secondaryText, setSecondaryText] = useState(props.secondaryText)
 
-  const [color, setColor] = useState("white")
-  const [zIndex, setZIndex] = useState("")
+  const [style, setStyle] = useState({
+    color: "white",
+    zIndex: "1",
+    [props.position]: "-100%"
+  })
 
   useEffect(() => {
-    if (!secondaryText) {
-      setZIndex(1)
+    if (secondaryText) {
+      setStyle({
+        ...style,
+        zIndex: "99",
+      })
     }
-  })
+  }, [])
 
 
   function handleOver() {
-    slider.current.style.top = "0px"
-    setColor("#384552")
+    setStyle({
+      ...style,
+      color: "#384552",
+      [props.position]: "0%"
+    })
   }
 
   function handleLeave() {
-    slider.current.style.top = "-50px"
-    setColor("white")
+    setStyle({
+      ...style,
+      color: "white",
+      [props.position]: "-100%"
+    })
   }
 
   return (
@@ -37,14 +49,13 @@ export default function PosButton(props) {
         >
           <p
             className="btn-text"
-            style={{color: color}}
+            style={{color: style.color}}
             >
             {props.text}
           </p>
           <div
             id="slider"
-            ref={slider}
-            style={{zIndex: zIndex}}
+            style={style}
             >
             {secondaryText}
           </div>

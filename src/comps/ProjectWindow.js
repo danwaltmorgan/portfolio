@@ -23,8 +23,14 @@ export default function ProjectWindow(props) {
       <div className="banner bottom-banner"></div>
       <div className="bottom-banner-content banner-content">
 
-        <PosButton text="GitHub"/>
-        <PosButton text="WebSite"/>
+        <PosButton
+          text="GitHub"
+          position="left"
+          />
+        <PosButton
+          text="WebSite"
+          position="right"
+        />
 
 
       </div>
