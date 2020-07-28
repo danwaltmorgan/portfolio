@@ -17,13 +17,19 @@ export default function Projects() {
     })
   }
 
-  let projects = data.map(project => {
+  let projects = data.map((project, i) => {
     return (
       <div>
         <ProjectWindow
           title={project.title}
+          tech={project.tech}
+          description={project.description}
           url={project.url}
+          github={project.github}
+          img={project.img}
+          alt={project.alt}
           id={project.id}
+          key={"key" + i}
         />
       </div>
     )

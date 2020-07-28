@@ -10,24 +10,31 @@ export default function ProjectWindow(props) {
       className="project-container"
       id={props.id}
       >
-      <div className="banner top-banner">
-      </div>
-      <div className="top-banner-content banner-content">
-        <h2 className="project-title"
-          >{props.title}
-        </h2>
-      </div>
       <div className="img-div">
-        <img src="https://lh3.googleusercontent.com/ndlK4-IZ-QwMnZzmluc8ca_B6XMSjDxZKHkxZgxqCPwOomky2YgJk-KTby5IOCZ-bZw7oDLq30gtufS215k--NLeSLPJb9oEN_j6rBDD4cu46wEZ949uRpuZH77l7zlqQOg4QDeyLQ=s200-p-k"></img>
+        <img src={props.img} alt={props.alt}></img>
       </div>
 
+      <div className="banner top-banner"></div>
+      <div className="top-banner-content banner-content">
+        <h2 className="project-title">
+          {props.title}
+        </h2>
+        <h3 className="project-tech">
+          {props.tech}
+        </h3>
+        <p className="project-description">
+          {props.description}
+        </p>
+      </div>
 
-      <div className="banner bottom-banner"></div>
       <div className="banner right-banner"></div>
       <div className="right-banner-content banner-content">
         <PosButton
           text="GitHub"
           position="right"
+          background="#00d0d0"
+          href={props.github}
+          target="_blank"
         />
       </div>
 
@@ -36,10 +43,13 @@ export default function ProjectWindow(props) {
         <PosButton
           text="WebSite"
           position="left"
+          background="#00d0d0"
+          href={props.url}
+          target="_blank"
         />
       </div>
 
-
+      <div className="banner bottom-banner"></div>
 
     </div>
   )

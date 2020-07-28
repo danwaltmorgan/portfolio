@@ -21,6 +21,9 @@ export default function Home() {
             text="Learn More"
             secondaryText="About Me"
             position="top"
+            background="indianred"
+            href="#projects"
+            target=""
           />
         </div>
       </div>
