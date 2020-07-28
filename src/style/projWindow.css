@@ -59,6 +59,7 @@ img {
 .banner-content {
   width: 100%;
   height: 50%;
+  /* margin: 5%; */
   position: absolute;
   transition: all .5s;
   display: flex;
@@ -97,17 +98,20 @@ img {
 .project-title {
   color: white;
   opacity: 100%;
-  font-size: 3em;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .project-tech {
-  color: white;
+  /* color: white; */
+  color: #00d0d0;
   font-size: 2em;
 }
 
 .project-description {
   color: white;
   text-align: center;
+  margin: 0;
 }
 
 .project-title, .project-tech {

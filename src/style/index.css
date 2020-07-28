@@ -6,7 +6,9 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  font-family: monospace;
+  /* font-family: monospace; */
+  font-family: 'Space Mono', monospace;
+  /* font-family: 'Monoton', cursive; */
 }
 
 .container {
@@ -19,4 +21,14 @@ body {
   justify-content: center;
   align-items: center;
   scroll-behavior: smooth;
+}
+
+.project-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-section {
+  /* height: 100%; */
 }

@@ -37,10 +37,12 @@ export default function Projects() {
 
   return(
     <div
-      className="container"
+      className="container project-section"
       id="projects"
       >
-      {projects}
+      <div className="project-row">
+        {projects}
+      </div>
     </div>
   )
 }
