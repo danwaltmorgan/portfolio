@@ -2,6 +2,7 @@
 import signSite from '../images/sign-site.png'
 import maybeList from '../images/maybe.png'
 import pomodoro from '../images/pomodoro.png'
+import blackSquirrel from '../images/blacksquirrel.png'
 
 export default [
   {
@@ -38,7 +39,8 @@ export default [
     description: "Information and contact site for local business",
     id: "black-squirrel",
     url: "https://blacksquirrelcarpentryandpainting.com",
-    github: "https://github.com/ltdan681/painting-on-the-run"
+    github: "https://github.com/ltdan681/painting-on-the-run",
+    img: blackSquirrel,
   }
 
 ]
