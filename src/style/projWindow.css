@@ -72,6 +72,7 @@ img {
   top: -50%;
   flex-direction: column;
   justify-content: center;
+  /* padding: 5%; */
 }
 
 .bottom-banner-content {
@@ -98,24 +99,25 @@ img {
 .project-title {
   color: white;
   opacity: 100%;
-  font-size: 2.5em;
+  font-size: 2em;
+  /* margin: 10px; */
   text-align: center;
 }
 
 .project-tech {
   /* color: white; */
   color: #00d0d0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .project-description {
   color: white;
   text-align: center;
-  margin: 0;
+  margin: 10px 15px;
 }
 
 .project-title, .project-tech {
-  margin: 0;
+  margin: 5px;
 }
 
 .project-container:hover > .img-div{
