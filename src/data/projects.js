@@ -32,5 +32,5 @@ export default [
     github: "https://github.com/ltdan681/pomodoro",
     img: pomodoro,
   },
-
+  
 ]

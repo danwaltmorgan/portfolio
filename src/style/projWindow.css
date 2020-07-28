@@ -32,7 +32,8 @@ img {
   transition: all .5s;
   left: 0;
   opacity: 30%;
-  background: #1D232A;
+  /* background: #1D232A; */
+  background: black;
 }
 
 .top-banner {
