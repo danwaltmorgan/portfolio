@@ -23,6 +23,7 @@ export default [
     url: "https://maybe-list.netlify.app",
     github: "https://github.com/ltdan681/maybe-list",
     img: maybeList,
+    alt: "Screen shot of https://maybe-list.netlify.app"
   },
   {
     title: "Pomodoro Timer",
@@ -32,6 +33,7 @@ export default [
     url: "https://dan-pomodoro-timer.netlify.app",
     github: "https://github.com/ltdan681/pomodoro",
     img: pomodoro,
+    alt: "Screen shot of https://dan-pomodoro-timer.netlify.app"
   },
   {
     title: "Black Squirrel Carpenrty & Painting",
@@ -41,6 +43,7 @@ export default [
     url: "https://blacksquirrelcarpentryandpainting.com",
     github: "https://github.com/ltdan681/painting-on-the-run",
     img: blackSquirrel,
+    alt: "Screen shot of https://blacksquirrelcarpentryandpainting.com"
   }
 
 ]
