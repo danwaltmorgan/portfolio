@@ -30,9 +30,8 @@ img {
   height: 100%;
   position: absolute;
   transition: all .5s;
-  left: 0;
-  opacity: 30%;
-  /* background: #1D232A; */
+  /* left: 0; */
+  opacity: .2;
   background: black;
 }
 
@@ -96,9 +95,7 @@ img {
 
 .project-title {
   color: white;
-  opacity: 100%;
   font-size: 2em;
-  /* margin: 10px; */
   text-align: center;
 }
 
