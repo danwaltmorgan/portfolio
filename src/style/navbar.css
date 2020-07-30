@@ -1,7 +1,18 @@
 .nav-container {
   z-index: 999;
+  background: #606A75;
+
 }
 
+#location {
+  width: 25%;
+  height: 7vh;
+  background: indianred;
+  position: absolute;
+  left: 0%;
+  z-index: 98;
+  transition: all .5s;
+}
 
 a {
   text-decoration: none;
@@ -11,13 +22,9 @@ a {
 li {
   list-style: none;
   width: 100%;
-  /* height: 20vh; */
-  /* transform: rotate(-90deg) */
+  z-index: 99;
 }
 
-li:hover {
-  background: indianred;
-}
 
 .list-container {
   display: flex;
@@ -35,16 +42,17 @@ li:hover {
   justify-content: center;
   align-items: center;
   color: white;
-  background: #606A75;
-  transition: background .5s;
+  z-index: 99;
+  /* background: #606A75; */
+  transition: color .2s;
 }
 .link:hover {
-  background: indianred;
   z-index: 99;
-  /* height: 10vh; */
-  /* transform: scaleY(1.5); */
+  color: #384552;
+  /* transform: scale(1.5); */
   transform-origin: top center;
 }
+
 
 .sticky {
   position: fixed;
@@ -57,12 +65,5 @@ li:hover {
 }
 
 a {
-  z-index: 100;
-}
-
-#active {
-  background: indianred;
-  width: 100%;
-  height: 10vh;
-  z-index: 1;
+  /* z-index: 100; */
 }

@@ -22,7 +22,7 @@ export default function Home() {
             secondaryText="About Me"
             position="top"
             background="indianred"
-            href="#projects"
+            href="#about"
             target=""
           />
         </div>
