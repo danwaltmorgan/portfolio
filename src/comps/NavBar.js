@@ -7,13 +7,22 @@ export default function NavBar() {
 
   const [active, setActive] = useState("0%")
 
+  const defaultColor = {
+    "home-nav": "white",
+    "about-nav": "white",
+    "projects-nav": "white",
+    "contact-nav": "white"
+  }
+
+  const[color, setColor] = useState(defaultColor)
+
 
   useEffect(() => {
     window.onscroll = () => {
       stickyNav()
       handleScroll()
     }
-  })
+  }, [])
 
   function stickyNav() {
     const navbar = document.getElementById("navbar")
@@ -31,31 +40,52 @@ export default function NavBar() {
     const buffer = 500
 
     const homeAboutThresh = document.getElementById("about").offsetTop - buffer
-
     const aboutProjectsThresh = document.getElementById("projects").offsetTop - buffer
-
     const projectsContactThresh = document.getElementById("contact").offsetTop - buffer
 
     const location = document.getElementById("location")
     const position = window.pageYOffset
 
     if (position <= homeAboutThresh) {
-      setActive("0%")
+      handleSlider("home-nav")
     }
     if (position >= homeAboutThresh
       && position <= aboutProjectsThresh) {
-      setActive("25%")
+      handleSlider("about-nav")
     }
     if (position >= aboutProjectsThresh
       && position <= projectsContactThresh) {
-        setActive("50%")
-      }
+      handleSlider("projects-nav")
+    }
     if (position >= projectsContactThresh) {
-      setActive("75%")
+      handleSlider("contact-nav")
     }
   }
 
+  function handleSlider(pos) {
+    const location = document.getElementById(pos).offsetLeft
+    setColor({defaultColor, [pos]: "#384552"})
+    setActive(location)
+  }
 
+  const navItems = ["home", "about", "projects", "contact"].map(item => {
+
+    const capitalized = item[0].toUpperCase() + item.slice(1)
+    const nav = item + "-nav"
+
+    return (
+      <li>
+        <a
+          href={"#" + item}
+          className="link"
+          id={nav}
+          style={{color: color[nav]}}
+          >
+          {capitalized}
+        </a>
+      </li>
+    )
+  })
 
   return (
     <div
@@ -67,44 +97,7 @@ export default function NavBar() {
         style={{left: active}}
         ></div>
       <ul className="list-container">
-        <li>
-          <a
-            href="#home"
-            className="link"
-            id="home-nav"
-            >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            className="link"
-            id="about-nav"
-
-            >
-              About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            className="link"
-            id="projects-nav"
-
-            >
-              Projects
-            </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            className="link"
-            id="contact-nav"
-            >
-              Contact
-          </a>
-        </li>
+        {navItems}
       </ul>
     </div>
   )
