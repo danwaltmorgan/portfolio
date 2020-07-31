@@ -16,13 +16,17 @@ export default function NavBar() {
 
   const[color, setColor] = useState(defaultColor)
 
+  const [clicked, setClicked] = useState(false)
+
+  const [scroll, setScroll] = useState(false)
+
 
   useEffect(() => {
     window.onscroll = () => {
       stickyNav()
       handleScroll()
     }
-  }, [])
+  })
 
   function stickyNav() {
     const navbar = document.getElementById("navbar")
@@ -36,6 +40,8 @@ export default function NavBar() {
   }
 
   function handleScroll(e) {
+
+    if (clicked) return
 
     const buffer = 500
 
@@ -60,12 +66,21 @@ export default function NavBar() {
     if (position >= projectsContactThresh) {
       handleSlider("contact-nav")
     }
+
   }
 
   function handleSlider(pos) {
     const location = document.getElementById(pos).offsetLeft
     setColor({defaultColor, [pos]: "#384552"})
     setActive(location)
+  }
+
+  function handleClick(e) {
+    setClicked(true)
+    handleSlider(e.target.id)
+    setTimeout(() => {
+      setClicked(false)
+    }, 500)
   }
 
   const navItems = ["home", "about", "projects", "contact"].map(item => {
@@ -80,6 +95,7 @@ export default function NavBar() {
           className="link"
           id={nav}
           style={{color: color[nav]}}
+          onClick={e => handleClick(e)}
           >
           {capitalized}
         </a>
