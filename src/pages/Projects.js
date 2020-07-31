@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import SectionTitle from "../comps/SectionTitle"
 import ProjectWindow from "../comps/ProjectWindow"
 import projectsData from "../data/projects.js"
+
 
 
 export default function Projects() {
@@ -40,6 +42,7 @@ export default function Projects() {
       className="container project-section"
       id="projects"
       >
+      <SectionTitle text="Projects I've Worked On"/>
       <div className="project-row">
         {projects}
       </div>

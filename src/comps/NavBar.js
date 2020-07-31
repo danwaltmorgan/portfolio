@@ -18,9 +18,6 @@ export default function NavBar() {
 
   const [clicked, setClicked] = useState(false)
 
-  const [scroll, setScroll] = useState(false)
-
-
   useEffect(() => {
     window.onscroll = () => {
       stickyNav()

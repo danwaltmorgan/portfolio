@@ -1,12 +1,15 @@
 import React from 'react'
+import SectionTitle from '../comps/SectionTitle'
 
 export default function About() {
   return(
-    <div class="container" id="about"
-    style={{alignItems: "flex-start"}}>
-      <h1
-      style={{marginTop: "10vh"}}
-      >About</h1>
+    <div class="container" id="about">
+      <SectionTitle
+        text="About Me"
+      />
+      {/* <h2
+      className="section-title"
+      ><span className="first-letter">A</span>bout Me</h2> */}
     </div>
   )
 }
