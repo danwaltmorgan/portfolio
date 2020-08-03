@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
-
 import '../style/navbar.css'
 
 export default function NavBar() {
@@ -18,19 +16,18 @@ export default function NavBar() {
 
   const [clicked, setClicked] = useState(false)
 
+
   useEffect(() => {
     window.onscroll = () => {
       stickyNav()
       handleScroll()
     }
-  }, [])
+  })
 
   function stickyNav() {
     const navbar = document.getElementById("navbar")
     const homeHeight = document.getElementById("home").offsetHeight
     if (window.pageYOffset >= homeHeight) {
-
-      console.log("sticky")
       navbar.classList.add("sticky")
     }
     else {
@@ -38,7 +35,7 @@ export default function NavBar() {
     }
   }
 
-  function handleScroll(e) {
+  function handleScroll() {
 
     if (clicked) return
 

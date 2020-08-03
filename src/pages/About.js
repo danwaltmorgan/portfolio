@@ -1,21 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import "../style/about.css"
 import SectionTitle from '../comps/SectionTitle'
+import profPic from "../images/prof-pic.jpg"
 
 export default function About() {
 
-  const [margin, setMargin] = useState("5px")
-  const [width, setWidth] = useState("90%")
+  const [margin, setMargin] = useState("0px")
+  const [width, setWidth] = useState("0%")
+  const [borderRadius, setBorderRadius] = useState("0px")
+  const [position, setPosition] = useState("-150%")
 
   useEffect(() => {
-    window.addEventListener("onscroll", handleScrollAbout())
-  }, [])
+    window.addEventListener("scroll", handleAbout)
+  })
 
-  function handleScrollAbout() {
-    const threshold = document.getElementById("about").offsetTop
+  function handleAbout() {
+    const threshold = document.getElementById("about").offsetTop - 200
+    const aboutSection = document.querySelectorAll(".about-section")
+    const invisible = document.querySelectorAll(".invisible")
     if (window.pageYOffset >= threshold) {
-      setWidth("90%")
+      setWidth("100%")
+      setPosition("0%")
+      setTimeout(() => {
         setMargin("5px")
+        aboutSection.forEach(sec => {
+          sec.classList.add("border-radius")
+        })
+        invisible.forEach(el => {
+          el.classList.add("visible")
+        })
+      }, 800)
     }
   }
 
@@ -24,23 +38,36 @@ export default function About() {
       <SectionTitle
         text="About Me"
       />
-      <div className="section-container" style={{width: width}}>
+      <div className="section-container" id="about-container">
         <div id="left-section" style={{marginRight: margin}}>
           <div
             className="about-section"
             id="bio"
-            style={{marginBottom: margin}}
-          ></div>
+            style={{marginBottom: margin, left: position}}
+          >
+            <div id="pic-container" className="about-section"
+              style={{marginRight: margin}}>
+              <img src={profPic} id="prof-pic" className="about-section invisible"></img>
+            </div>
+            <div id="bio-info" className="about-section"
+              style={{marginLeft: margin}}>
+              <div className="invisible about-content">
+                <p>Hi, I'm a self taught JavaScript developer located in Cincinnati, Ohio. I sepecialize in simple, responsive design with a passion for clean, reusable code.
+                </p>
+                  <p>I'm always open for new opportunities and projects so let's connect!</p>
+              </div>
+            </div>
+          </div>
           <div
             className="about-section"
             id="education"
-            style={{marginTop: margin}}
+            style={{marginTop: margin, right: position}}
           ></div>
         </div>
         <div
           className="about-section"
           id="tech"
-          style={{marginLeft: margin}}
+          style={{marginLeft: margin, bottom: position}}
           ></div>
       </div>
 

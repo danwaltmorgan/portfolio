@@ -11,7 +11,7 @@ export default function ProjectWindow(props) {
       id={props.id}
       >
       <div className="img-div">
-        <img src={props.img} alt={props.alt}></img>
+        <img className="proj-pic" src={props.img} alt={props.alt}></img>
       </div>
 
       <div className="banner top-banner"></div>

@@ -8,6 +8,7 @@
   width: 90%;
   height: 75vh;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   transition: all .5s;
@@ -20,32 +21,72 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  margin-right: 5px;
-  /* background: red; */
 }
 
 .about-section {
-  background: white;
-  opacity: .8;
-  transition: all .5s;
-  /* border-radius: 10px; */
+  background: #606A75;
+  opacity: 1;
+  transition: all .7s;
 }
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.about-content {
+  margin: 20px;
+  transition: all .5s;
+  font-size: 1.5em !important;
+  color: white;
+  font-weight: normal;
+}
+
 
 #bio {
   width: 100%;
   height: 66%;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  background: none;
+  position: relative;
+}
+
+#prof-pic {
+  height: 100%;
+  transition: all 1s;
+  transform: rotateX(360deg);
+}
+
+#pic-container {
+  height: 100%;
+  max-width: 100%;
+}
+
+#bio-info {
+  width: 100%;
+  height: 100%;
+  /* margin-left: 5px; */
 }
 
 #education {
   width: 100%;
   height: 34%;
-  margin-top: 5px;
+  position: relative;
+  /* margin-top: 5px; */
 
 }
 
 #tech {
   width: 20%;
   height: 100%;
-  margin-left: 5px;
+  position: relative;
+  /* transform: rotate(90deg) */
 }
