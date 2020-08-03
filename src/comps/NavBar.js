@@ -23,12 +23,14 @@ export default function NavBar() {
       stickyNav()
       handleScroll()
     }
-  })
+  }, [])
 
   function stickyNav() {
     const navbar = document.getElementById("navbar")
     const homeHeight = document.getElementById("home").offsetHeight
     if (window.pageYOffset >= homeHeight) {
+
+      console.log("sticky")
       navbar.classList.add("sticky")
     }
     else {
@@ -46,7 +48,6 @@ export default function NavBar() {
     const aboutProjectsThresh = document.getElementById("projects").offsetTop - buffer
     const projectsContactThresh = document.getElementById("contact").offsetTop - buffer
 
-    const location = document.getElementById("location")
     const position = window.pageYOffset
 
     if (position <= homeAboutThresh) {
