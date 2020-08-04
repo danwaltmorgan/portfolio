@@ -26,10 +26,10 @@ export default function About() {
   const [margin, setMargin] = useState("0px")
   const [width, setWidth] = useState("0%")
   const [borderRadius, setBorderRadius] = useState("0px")
-  const [position, setPosition] = useState("-120%")
+  const [position, setPosition] = useState("-150%")
 
   useEffect(() => {
-    window.addEventListener("scroll", handleAbout)
+      window.addEventListener("scroll", handleAbout)
   })
 
   function handleAbout() {
@@ -37,83 +37,84 @@ export default function About() {
     const aboutSection = document.querySelectorAll(".about-section")
     const invisible = document.querySelectorAll(".invisible")
     if (window.pageYOffset >= threshold) {
-      setWidth("100%")
       setPosition("0%")
       setTimeout(() => {
-        setMargin("5px")
+        setMargin("10px")
         aboutSection.forEach(sec => {
           sec.classList.add("border-radius")
         })
-        invisible.forEach(el => {
-          el.classList.add("visible")
+        invisible.forEach((el, i) => {
+          const visible = setTimeout(() => {
+            el.classList.add("visible")
+          }, 100 * i)
         })
       }, 900)
     }
   }
 
   return(
-    <div class="container about-container" id="about">
+    <div class="container" id="about">
       <SectionTitle
         text="About Me"
       />
-      <div className="section-container" id="about-container">
-        <div id="left-section" style={{marginRight: margin}}>
-          <div
-            className="about-section"
-            id="bio"
-            style={{marginBottom: margin, left: position}}
-          >
-            <div id="pic-container" className="about-section"
-              style={{marginRight: margin}}>
-              <img src={profPic} id="prof-pic" className="about-section invisible"></img>
-            </div>
-            <div id="bio-info" className="about-section"
-              style={{marginLeft: margin}}>
-              <div className="invisible about-content">
-                <p>
-                </p>
+      <div
+        className="grid-container"
+        id="about-container"
+        style={{gridGap: margin}}
+        >
 
-              </div>
-            </div>
-          </div>
-          <div
-            className="about-section"
-            id="tech"
-            style={{marginTop: margin, right: position}}
+        <div
+          id="pic-container"
+          className="about-section"
+          style={{top: position}}
           >
-            <Icon
-              icon={html5Icon}
-              className="icons"
-            />
-            <Icon
-              icon={css3}
-              className="icons"
-            />
-            <Icon
-              icon={jsIcon}
-              className="icons"
-            />
-            <Icon
-              icon={reactIcon}
-              className="icons"
-            />
-            <Icon
-              icon={reduxIcon}
-              className="icons"
-            />
-            <Icon
-              icon={d3js}
-              className="icons"
-            />
+          <img src={profPic} id="prof-pic" className="about-section invisible"></img>
+        </div>
+
+        <div
+          id="bio"
+          className="about-section"
+          style={{left: position}}
+          >
+          <div className="invisible about-content">
           </div>
         </div>
         <div
           className="about-section"
+          id="tech"
+          style={{right: position}}
+        >
+          <Icon
+            icon={html5Icon}
+            className="icons invisible"
+          />
+          <Icon
+            icon={css3}
+            className="icons invisible"
+          />
+          <Icon
+            icon={jsIcon}
+            className="icons invisible"
+          />
+          <Icon
+            icon={reactIcon}
+            className="icons invisible"
+          />
+          <Icon
+            icon={reduxIcon}
+            className="icons invisible"
+          />
+          <Icon
+            icon={d3js}
+            className="icons invisible"
+          />
+        </div>
+        <div
+          className="about-section"
           id="education"
-          style={{marginLeft: margin, bottom: position}}
+          style={{bottom: position}}
           >
-
-          </div>
+        </div>
       </div>
     </div>
   )
