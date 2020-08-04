@@ -3,12 +3,30 @@ import "../style/about.css"
 import SectionTitle from '../comps/SectionTitle'
 import profPic from "../images/prof-pic.jpg"
 
+import { Icon, InlineIcon } from '@iconify/react';
+// npm install --save-dev @iconify/react @iconify/icons-cib
+import html5Icon from '@iconify/icons-cib/html5';
+
+// npm install --save-dev @iconify/react @iconify/icons-cib
+import css3 from '@iconify/icons-cib/css3';
+
+// npm install --save-dev @iconify/react @iconify/icons-cib
+import jsIcon from '@iconify/icons-cib/js';
+
+import reactIcon from '@iconify/icons-cib/react';
+
+import reduxIcon from '@iconify/icons-cib/redux'
+
+import d3js from '@iconify/icons-cib/d3-js'
+
+
+
 export default function About() {
 
   const [margin, setMargin] = useState("0px")
   const [width, setWidth] = useState("0%")
   const [borderRadius, setBorderRadius] = useState("0px")
-  const [position, setPosition] = useState("-100%")
+  const [position, setPosition] = useState("-120%")
 
   useEffect(() => {
     window.addEventListener("scroll", handleAbout)
@@ -60,20 +78,43 @@ export default function About() {
           </div>
           <div
             className="about-section"
-            id="education"
+            id="tech"
             style={{marginTop: margin, right: position}}
-          ></div>
+          >
+            <Icon
+              icon={html5Icon}
+              className="icons"
+            />
+            <Icon
+              icon={css3}
+              className="icons"
+            />
+            <Icon
+              icon={jsIcon}
+              className="icons"
+            />
+            <Icon
+              icon={reactIcon}
+              className="icons"
+            />
+            <Icon
+              icon={reduxIcon}
+              className="icons"
+            />
+            <Icon
+              icon={d3js}
+              className="icons"
+            />
+          </div>
         </div>
         <div
           className="about-section"
-          id="tech"
+          id="education"
           style={{marginLeft: margin, bottom: position}}
           >
 
           </div>
       </div>
-
-
     </div>
   )
 }
