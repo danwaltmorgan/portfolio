@@ -5,7 +5,7 @@
 .nav-container {
   z-index: 999;
   background: #606A75;
-
+  border-bottom: 1px solid #384552;
 }
 
 #location {
@@ -65,7 +65,7 @@ li {
 }
 
 .sticky + .container {
-  padding-top: 7vh;
+  padding-top: 5vh;
 }
 
 a {

@@ -47,6 +47,8 @@
   font-size: 1.5em !important;
   color: white;
   font-weight: normal;
+  /* border: 3px solid white; */
+  /* border-radius: 10px; */
 }
 
 
@@ -89,4 +91,45 @@
   height: 100%;
   position: relative;
   /* transform: rotate(90deg) */
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .section-container {
+    flex-direction: column;
+    width: 90%;
+    height: 93vh;
+  }
+  #left-section {
+    height: 70%;
+    width: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  #bio {
+    height: 60%;
+  }
+  #education {
+    height: 40%
+  }
+  #tech {
+    width: 100%;
+    height: 100%;
+    margin: 5px 5px 0 0;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
 }

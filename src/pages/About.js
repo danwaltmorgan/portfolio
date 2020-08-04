@@ -8,7 +8,7 @@ export default function About() {
   const [margin, setMargin] = useState("0px")
   const [width, setWidth] = useState("0%")
   const [borderRadius, setBorderRadius] = useState("0px")
-  const [position, setPosition] = useState("-150%")
+  const [position, setPosition] = useState("-100%")
 
   useEffect(() => {
     window.addEventListener("scroll", handleAbout)
@@ -29,7 +29,7 @@ export default function About() {
         invisible.forEach(el => {
           el.classList.add("visible")
         })
-      }, 800)
+      }, 900)
     }
   }
 
@@ -52,9 +52,9 @@ export default function About() {
             <div id="bio-info" className="about-section"
               style={{marginLeft: margin}}>
               <div className="invisible about-content">
-                <p>Hi, I'm a self taught JavaScript developer located in Cincinnati, Ohio. I sepecialize in simple, responsive design with a passion for clean, reusable code.
+                <p>
                 </p>
-                  <p>I'm always open for new opportunities and projects so let's connect!</p>
+
               </div>
             </div>
           </div>
@@ -68,7 +68,9 @@ export default function About() {
           className="about-section"
           id="tech"
           style={{marginLeft: margin, bottom: position}}
-          ></div>
+          >
+
+          </div>
       </div>
 
 
