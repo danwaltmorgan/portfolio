@@ -5,19 +5,20 @@ import profPic from "../images/prof-pic.jpg"
 
 import { Icon, InlineIcon } from '@iconify/react';
 // npm install --save-dev @iconify/react @iconify/icons-cib
-import html5Icon from '@iconify/icons-cib/html5';
-
-// npm install --save-dev @iconify/react @iconify/icons-cib
-import css3 from '@iconify/icons-cib/css3';
-
-// npm install --save-dev @iconify/react @iconify/icons-cib
-import jsIcon from '@iconify/icons-cib/js';
-
-import reactIcon from '@iconify/icons-cib/react';
-
-import reduxIcon from '@iconify/icons-cib/redux'
-
-import d3js from '@iconify/icons-cib/d3-js'
+// import html5Icon from '@iconify/icons-cib/html5';
+//
+// // npm install --save-dev @iconify/react @iconify/icons-cib
+// import css3 from '@iconify/icons-cib/css3';
+//
+// // npm install --save-dev @iconify/react @iconify/icons-cib
+// import jsIcon from '@iconify/icons-cib/js';
+//
+// import reactIcon from '@iconify/icons-cib/react';
+//
+// import reduxIcon from '@iconify/icons-cib/redux'
+//
+// import d3js from '@iconify/icons-cib/d3-js'
+import logos from "../data/tech-logos.js"
 
 import ouSeal from '../images/ou-seal.png'
 
@@ -51,6 +52,18 @@ export default function About() {
       }, 700)
     }
   }
+
+  const techLogos = logos.map(logo => {
+    return (
+      <div className="invisible icon-container">
+        <p className="icon-title">{logo.id}</p>
+        <Icon
+          icon={logo.logo}
+          className="icons"
+        />
+      </div>
+    )
+  })
 
   return(
     <div class="container" id="about">
@@ -93,30 +106,7 @@ export default function About() {
           id="tech"
           style={{bottom: position}}
         >
-          <Icon
-            icon={html5Icon}
-            className="icons invisible"
-          />
-          <Icon
-            icon={css3}
-            className="icons invisible"
-          />
-          <Icon
-            icon={jsIcon}
-            className="icons invisible"
-          />
-          <Icon
-            icon={reactIcon}
-            className="icons invisible"
-          />
-          <Icon
-            icon={reduxIcon}
-            className="icons invisible"
-          />
-          <Icon
-            icon={d3js}
-            className="icons invisible"
-          />
+          {techLogos}
         </div>
 
         <div
@@ -138,7 +128,6 @@ export default function About() {
                 </div>
             </div>
             <div className="ed-content-container">
-              {/* <h3 className="invisible">Certificates</h3> */}
                 <img id="fcc-logo"
                   className="invisible ed-logo"
                   alt="Freecodecamp.com logo"
@@ -148,14 +137,12 @@ export default function About() {
                   <p className="ed-title">Free Code Camp</p>
                   <ul>
                     <li>Responsive Web Design</li>
-                    <li>JavaScript Algorithms and Data Structures</li>
+                    <li>JavaScript Algorithms & Data Structures</li>
                     <li>Front End Libraries </li>
                   </ul>
                 </div>
             </div>
-
         </div>
-
       </div>
     </div>
   )

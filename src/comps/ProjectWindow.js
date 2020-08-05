@@ -4,7 +4,6 @@ import PosButton from '../comps/PosButton'
 
 export default function ProjectWindow(props) {
 
-
   return (
     <div
       className="project-container"

@@ -153,12 +153,10 @@
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -170,6 +168,12 @@
   .proj-pic {
     width: 40vw;
     height: 40vw;
+  }
+  .project-title {
+    font-size: 1.5em;
+  }
+  .project-tech {
+    font-size: 1.2em;
   }
 }
 
