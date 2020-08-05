@@ -56,7 +56,10 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-
+  .btn {
+    width: 15vw;
+    font-size: 1.2em;
+  }
 }
 
 /* Large desktop */

@@ -19,13 +19,13 @@ import reduxIcon from '@iconify/icons-cib/redux'
 
 import d3js from '@iconify/icons-cib/d3-js'
 
+import ouSeal from '../images/ou-seal.png'
 
+import fccLogo from '../images/fcc-logo.png'
 
 export default function About() {
 
   const [margin, setMargin] = useState("0px")
-  const [width, setWidth] = useState("0%")
-  const [borderRadius, setBorderRadius] = useState("0px")
   const [position, setPosition] = useState("-150%")
 
   useEffect(() => {
@@ -48,15 +48,15 @@ export default function About() {
             el.classList.add("visible")
           }, 100 * i)
         })
-      }, 900)
+      }, 700)
     }
   }
 
   return(
     <div class="container" id="about">
-      <SectionTitle
+      {/* <SectionTitle
         text="About Me"
-      />
+      /> */}
       <div
         className="grid-container"
         id="about-container"
@@ -66,7 +66,7 @@ export default function About() {
         <div
           id="pic-container"
           className="about-section"
-          style={{top: position}}
+          style={{left: position}}
           >
           <img src={profPic} id="prof-pic" className="about-section invisible"></img>
         </div>
@@ -74,15 +74,24 @@ export default function About() {
         <div
           id="bio"
           className="about-section"
-          style={{left: position}}
+          style={{top: position}}
           >
+            <div className="invisible"
+              id="about-me"
+              >
+              <SectionTitle
+                text="About Me"
+              />
+            </div>
           <div className="invisible about-content">
+            <p>I'm a self taught JavaScript Developer living in Cincinnati, Ohio. I have a passion for clean, responsive design and an appetite for efficiency. I'm always open to collaborate so lets <a id="connect" href="#contact">connect!</a></p>
           </div>
         </div>
+
         <div
           className="about-section"
           id="tech"
-          style={{right: position}}
+          style={{bottom: position}}
         >
           <Icon
             icon={html5Icon}
@@ -109,12 +118,44 @@ export default function About() {
             className="icons invisible"
           />
         </div>
+
         <div
           className="about-section"
           id="education"
-          style={{bottom: position}}
+          style={{right: position}}
           >
+            <h3 className="head-title invisible">Education</h3>
+            <div className="ed-content-container">
+              {/* <h3 className="invisible">Degree</h3> */}
+              <img id="ouSeal"
+                className="invisible ed-logo"
+                alt="Ohio University Seal" src={ouSeal}
+              />
+
+                <div className="ed-content invisible">
+                  <p className="ed-title"> Ohio University</p>
+                  <p>Bachelor of Arts in Physics</p>
+                </div>
+            </div>
+            <div className="ed-content-container">
+              {/* <h3 className="invisible">Certificates</h3> */}
+                <img id="fcc-logo"
+                  className="invisible ed-logo"
+                  alt="Freecodecamp.com logo"
+                  src={fccLogo}
+                />
+                <div className="ed-content invisible">
+                  <p className="ed-title">Free Code Camp</p>
+                  <ul>
+                    <li>Responsive Web Design</li>
+                    <li>JavaScript Algorithms and Data Structures</li>
+                    <li>Front End Libraries </li>
+                  </ul>
+                </div>
+            </div>
+
         </div>
+
       </div>
     </div>
   )
