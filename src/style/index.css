@@ -19,6 +19,7 @@ body {
   color: white;
   font-size: 3em;
   margin-top: 7vh;
+  margin-bottom: 0;
 }
 
 .first-letter {
@@ -31,7 +32,7 @@ body {
   background: #384552;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   scroll-behavior: smooth;
@@ -41,7 +42,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 10vh 0;
+  /* margin: 10vh 0; */
 }
 
 .project-section {

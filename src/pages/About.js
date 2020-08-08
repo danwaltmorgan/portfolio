@@ -1,27 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import "../style/about.css"
 import SectionTitle from '../comps/SectionTitle'
+import PosButton from "../comps/PosButton"
 import profPic from "../images/prof-pic.jpg"
 
 import { Icon, InlineIcon } from '@iconify/react';
-// npm install --save-dev @iconify/react @iconify/icons-cib
-// import html5Icon from '@iconify/icons-cib/html5';
-//
-// // npm install --save-dev @iconify/react @iconify/icons-cib
-// import css3 from '@iconify/icons-cib/css3';
-//
-// // npm install --save-dev @iconify/react @iconify/icons-cib
-// import jsIcon from '@iconify/icons-cib/js';
-//
-// import reactIcon from '@iconify/icons-cib/react';
-//
-// import reduxIcon from '@iconify/icons-cib/redux'
-//
-// import d3js from '@iconify/icons-cib/d3-js'
+import githubIcon from '@iconify/icons-cib/github';
+import downloadStudy from '@iconify/icons-carbon/download-study'
 import logos from "../data/tech-logos.js"
-
 import ouSeal from '../images/ou-seal.png'
-
 import fccLogo from '../images/fcc-logo.png'
 
 export default function About() {
@@ -34,7 +21,7 @@ export default function About() {
   })
 
   function handleAbout() {
-    const threshold = document.getElementById("about").offsetTop - 200
+    const threshold = document.getElementById("about").offsetTop - 500
     const aboutSection = document.querySelectorAll(".about-section")
     const invisible = document.querySelectorAll(".invisible")
     if (window.pageYOffset >= threshold) {
@@ -67,9 +54,6 @@ export default function About() {
 
   return(
     <div class="container" id="about">
-      {/* <SectionTitle
-        text="About Me"
-      /> */}
       <div
         className="grid-container"
         id="about-container"
@@ -94,10 +78,38 @@ export default function About() {
               >
               <SectionTitle
                 text="About Me"
+                id="about-section-title"
               />
             </div>
           <div className="invisible about-content">
-            <p>I'm a self taught JavaScript Developer living in Cincinnati, Ohio. I have a passion for clean, responsive design and an appetite for efficiency. I'm always open to collaborate so lets <a id="connect" href="#contact">connect!</a></p>
+            <p>I'm a self taught JavaScript Developer living in Cincinnati, Ohio. I have a passion for clean, responsive design and an appetite for efficiency. I'm always open to collaborate so lets <a id="connect" href="#contact">connect!</a> </p>
+          </div>
+          <div className="button-section invisible">
+              <a
+                href="https://www.github.com/ltdan681"
+                target="_blank"
+                className="icon-anchor"
+                id="github-anchor"
+              >
+                <h4>View my Github</h4>
+                <Icon
+                  icon={githubIcon}
+                  id="github-icon"
+                  class="invisible icon-link"
+                />
+              </a>
+              <a
+                href=""
+                target="_blank"
+                className="icon-anchor"
+                id="resume-anchor"
+                download>
+                <h4>Download my Resume</h4>
+                <Icon
+                  icon={downloadStudy}
+                  class="invisible icon-link"
+                />
+              </a>
           </div>
         </div>
 
@@ -116,7 +128,6 @@ export default function About() {
           >
             <h3 className="head-title invisible">Education</h3>
             <div className="ed-content-container">
-              {/* <h3 className="invisible">Degree</h3> */}
               <img id="ouSeal"
                 className="invisible ed-logo"
                 alt="Ohio University Seal" src={ouSeal}
@@ -130,7 +141,7 @@ export default function About() {
             <div className="ed-content-container">
                 <img id="fcc-logo"
                   className="invisible ed-logo"
-                  alt="Freecodecamp.com logo"
+                  alt="Freecodecamp.org logo"
                   src={fccLogo}
                 />
                 <div className="ed-content invisible">

@@ -50,7 +50,8 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .btn {
-    width: 20vw;
+    width: 15vw;
+    font-size: 1.1em;
   }
 }
 

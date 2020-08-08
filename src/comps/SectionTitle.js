@@ -15,7 +15,7 @@ export default function SectionTitle(props) {
 
   return (
     <div>
-      <h2 className="section-title">{words}</h2>
+      <h2 className="section-title" id={props.id}>{words}</h2>
     </div>
   )
 }
