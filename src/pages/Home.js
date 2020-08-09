@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../style/home.css'
 import PosButton from '../comps/PosButton'
 
@@ -12,7 +12,7 @@ export default function Home() {
       >
       <div>
         <h1 className="text">
-          <span id="name">DanMorgan</span> <br/>
+          <span id="my-name">DanMorgan</span> <br/>
            Front-End <br/> Developer
         </h1>
         <div>

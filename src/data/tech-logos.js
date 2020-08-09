@@ -1,4 +1,3 @@
-import { Icon, InlineIcon } from '@iconify/react';
 // npm install --save-dev @iconify/react @iconify/icons-cib
 import html5Icon from '@iconify/icons-cib/html5';
 import css3 from '@iconify/icons-cib/css3';

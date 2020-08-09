@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import "../style/about.css"
 import SectionTitle from '../comps/SectionTitle'
-import PosButton from "../comps/PosButton"
 import profPic from "../images/prof-pic.jpg"
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import githubIcon from '@iconify/icons-cib/github';
 import downloadStudy from '@iconify/icons-carbon/download-study'
 import logos from "../data/tech-logos.js"
@@ -32,7 +31,7 @@ export default function About() {
           sec.classList.add("border-radius")
         })
         invisible.forEach((el, i) => {
-          const visible = setTimeout(() => {
+          setTimeout(() => {
             el.classList.add("visible")
           }, 100 * i)
         })
@@ -65,7 +64,7 @@ export default function About() {
           className="about-section"
           style={{left: position}}
           >
-          <img src={profPic} id="prof-pic" className="about-section invisible"></img>
+          <img src={profPic} alt="Dan Morgan, creator of this page, wearing a striped button up infront of a brick wall" id="prof-pic" className="about-section invisible"></img>
         </div>
 
         <div
@@ -87,7 +86,7 @@ export default function About() {
           <div className="button-section invisible">
               <a
                 href="https://www.github.com/ltdan681"
-                target="_blank"
+                // target="_blank"
                 className="icon-anchor"
                 id="github-anchor"
               >

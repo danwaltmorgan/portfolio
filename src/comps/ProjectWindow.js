@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import "../style/projWindow.css"
 import PosButton from '../comps/PosButton'
 

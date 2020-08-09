@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../style/posButton.css'
 
 export default function PosButton(props) {
 
 
-  const [secondaryText, setSecondaryText] = useState(props.secondaryText)
+  const [secondaryText] = useState(props.secondaryText)
 
   const [style, setStyle] = useState({
     color: "white",
@@ -26,6 +26,8 @@ export default function PosButton(props) {
       })
     }
   }, [])
+
+
 
 
   function handleOver() {
